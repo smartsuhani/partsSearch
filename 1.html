@@ -26,7 +26,7 @@
             var color = document.getElementsByName('color')[0].value;
             if (name != null && image != null && manu != null && color != null && price != null) {
                 a.push(new data(name, image, color, manu, price));
-                localStorage.setItem("Pro"+id1,JSON.stringify(a[a.length-1]));
+                localStorage.setItem("pro"+id1,JSON.stringify(a[a.length-1]));
             } else {
                 alert("Every Field is required!");
             }
@@ -42,7 +42,7 @@
         function disp() {
             var build = '<table id="product" border="1" width="90%" height="30px" style="margin-top: 10px;margin-left: 10px;">\n';
             for (var i = 0; i < localStorage.length; i++) {
-                var a2 = JSON.parse(localStorage.getItem("Pro"+i));
+                var a2 = JSON.parse(localStorage.getItem("pro"+i));
                 build += "<tr>";
 
                 build += "<td>" + a2.name + "</td>";
